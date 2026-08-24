@@ -21,7 +21,7 @@ title: "License, share & govern"
     {
       title: 'Framework for the Governance of Indigenous Data: HASS and Indigenous Research Data Commons',
       description: 'The Framework for the Governance of Indigenous Data provides a practical, culturally grounded approach to embedding Indigenous data governance across the HASS and Indigenous Research Data Commons. Developed through consultation and co-design, it supports Indigenous self-determination by providing principles, guidelines and accountability mechanisms for the ethical governance of Indigenous data throughout its lifecycle.',
-      image: '/working-with-data/license-share-govern/IDGFramework.png',
+      image: '/images/IDGFramework.png',
       link: 'https://zenodo.org/records/11135962',
     },
   ]"
@@ -75,7 +75,7 @@ title: "License, share & govern"
     {
         title: 'Explore existing licenses',
         description: 'Collections in the LDaCA Data Portal may use established licences, such as Creative Commons, or custom licences developed by data contributors to reflect the specific requirements of their collection. \n\n Explore the custom licences currently applied to LDaCA Data Portal collections, including what collection content they cover and how they shape access and use. Reviewing these examples may also help you consider appropriate licensing approaches for your own collections.',
-        image: '/working-with-data/license-share-govern/licence_graphic.png', 
+        image: '/images/licence_graphic.png', 
         link: '/resources/licenses',
     },
     ]"

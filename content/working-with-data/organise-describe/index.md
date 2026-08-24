@@ -33,7 +33,7 @@ title: "Organise & describe"
       {
         title: 'RO-Crate Playground',
         description: 'Already have an RO-Crate? RO-Crate Playground is a browser-based tool for exploring, testing and validating RO-Crates. Use the Playground to inspect RO-Crate metadata, check how entities and properties are structured and identify issues with an existing RO-Crate.',
-        image: '/images/Nyingarn_screenshot.png',
+        image: '/images/ROCratePlayground.png',
         link: 'https://ro-crate.ldaca.edu.au/'
       },
             {

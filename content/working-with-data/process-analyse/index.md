@@ -34,7 +34,7 @@ description="Being able to analyse large amounts of language data opens up vast 
     {
       title: 'LDaCA Wordflow',
       description: 'LDaCA Wordflow is a code-free text analytics tool that makes it easier for researchers to explore and analyse text without needing programming skills. Users can build flexible workflows by combining tools for frequency analysis, concordancing, trends, topic modelling and quotation analysis, with results from one tool feeding into the next.',
-      image: '/working-with-data/process-analyse/LDaCAWordflow.png',
+      image: '/images/LDaCAWordflow.png',
       link: 'https://australian-text-analytics-platform.github.io/LDaCa_Text_Analytics_Tools/',
     },
   ]"
@@ -103,7 +103,7 @@ description="Being able to analyse large amounts of language data opens up vast 
   :items="[
       {
         title: 'FIB DigiTalk 2025 ke-7, \'Using Large Data Sets for Qualitative Research\'',
-        image: '/working-with-data/process-analyse/FIBDigiTalk2025.png',
+        image: '/images/FIBDigiTalk2025.png',
         link: 'https://www.youtube.com/live/twCAdPazV2M',
         category: 'RECORDING'
       },
@@ -113,7 +113,7 @@ description="Being able to analyse large amounts of language data opens up vast 
       },
        {
         title: 'Vulgarity in English: Language, Creativity & Social Meaning',
-        image: '/working-with-data/process-analyse/ISLE.png',
+        image: '/images/ISLE.png,
         link: 'https://www.youtube.com/watch?v=l3K4v4LtDTQ',
         category: 'RECORDING'
       },

@@ -165,6 +165,8 @@ export default defineConfig({
   sitemap: {
     hostname: 'https://www.ldaca.edu.au' // TODO update this to the actual production URL before launch!
   },
+  // Set GITHUB_PAGES=true when building for GitHub Pages (e.g. https://<user>.github.io/ldaca-website/)
+  base: process.env.GITHUB_PAGES ? '/ldaca-website/' : '/',
   srcDir: "content",
   ignoreDeadLinks: true, // Temporarily ignore dead links while site is under development! Verify this!
   title: "LDaCA",

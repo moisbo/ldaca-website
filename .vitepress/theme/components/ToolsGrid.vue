@@ -1,6 +1,7 @@
 <script setup>
 import { ref, computed, onMounted, watch } from 'vue'
 import { ROCrate } from 'ro-crate'
+import { resolveUrl } from '../lib/url'
 
 const props = defineProps({
   heading: { type: String, default: '' },
@@ -258,7 +259,7 @@ watch(
       <div v-else class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
         <div v-for="(item, index) in paginatedSoftwareItems" :key="`${item.link}-${index}`"
           class="rounded-2xl shadow-sm overflow-hidden flex flex-col" :style="{
-            backgroundImage: `url(${props.backgroundImage})`,
+            backgroundImage: `url(${resolveUrl(props.backgroundImage)})`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat'

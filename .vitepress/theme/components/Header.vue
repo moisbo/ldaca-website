@@ -3,6 +3,7 @@ import { useData } from 'vitepress'
 import MenuLayout from './Menu.vue'
 import Sidebar from './Sidebar.vue'
 import VPNavBarSearch from 'vitepress/dist/client/theme-default/components/VPNavBarSearch.vue'
+import { resolveUrl } from '../lib/url'
 
 const { site, theme } = useData()
 const logo = theme.value.logo ?? {}
@@ -16,17 +17,17 @@ const headerBgColor = theme.value.headerBgColor ?? 'transparent'
       <div class="flex items-center">
         <!-- Logo centered using absolute positioning within relative parent -->
         <div class="absolute left-1/2 -translate-x-1/2 pt-2 mt-2">
-          <a href="/" class="flex items-center gap-2 hover:opacity-80 transition-opacity">
-            <img v-if="logo.light" :src="logo.light" alt="LDaCA" class="h-20 sm:h-24 md:h-28 w-auto p-2">
+          <a :href="resolveUrl('/')" class="flex items-center gap-2 hover:opacity-80 transition-opacity">
+          <img v-if="logo.light" :src="resolveUrl(logo.light)" alt="LDaCA" class="h-20 sm:h-24 md:h-28 w-auto p-2">
             <span v-if="!logo.light" class="font-bold text-base sm:text-lg">{{ site.title }}</span>
           </a>
         </div>
 
         <!-- Right quick menu - Desktop (≥819.2px) -->
         <div class="hidden lg:flex items-center gap-6 ml-auto pl-32">
-          <a href="/resources/posts/"
+          <a :href="resolveUrl('/resources/posts/')"
             class="text-base text-white hover:text-[#79A38D] hover:font-bold transition-colors">Blog</a>
-          <a href="/newsletter"
+          <a :href="resolveUrl('/newsletter')"
             class="text-base text-white hover:text-[#79A38D] hover:font-bold transition-colors">Newsletter</a>
           <VPNavBarSearch />
         </div>
@@ -39,8 +40,8 @@ const headerBgColor = theme.value.headerBgColor ?? 'transparent'
 
           <!-- Links below search -->
           <div class="flex gap-3">
-            <a href="/resources/posts/" class="text-s text-white hover:text-[#79A38D] transition-colors">Blog</a>
-            <a href="/newsletter" class="text-s text-white hover:text-[#79A38D] transition-colors">Newsletter</a>
+            <a :href="resolveUrl('/resources/posts/')" class="text-s text-white hover:text-[#79A38D] transition-colors">Blog</a>
+            <a :href="resolveUrl('/newsletter')" class="text-s text-white hover:text-[#79A38D] transition-colors">Newsletter</a>
           </div>
 
         </div>

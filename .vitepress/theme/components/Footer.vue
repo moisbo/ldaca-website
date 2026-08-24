@@ -1,6 +1,7 @@
 <script setup>
 import { useData } from 'vitepress'
 import PartnerLogos from './PartnerLogos.vue'
+import { resolveUrl } from '../lib/url'
 
 const { site, theme } = useData()
 const logo = theme.value.logo ?? {}
@@ -90,12 +91,12 @@ footer {
           <!-- Logo at top -->
           <div class="relative z-0 flex items-center justify-center gap-2">
             <a
-              href="/"
+              :href="resolveUrl('/')"
               class="flex items-center gap-2 hover:opacity-80 transition-opacity"
             >
               <img
                 v-if="logo.dark"
-                :src="logo.dark"
+                :src="resolveUrl(logo.dark)"
                 alt="LDaCA"
                 class="h-32 w-auto"
               >
@@ -135,21 +136,21 @@ footer {
             <p class="type-small text-[#393939]">
               Learn more
               <a
-                href="/about/organisation"
+                :href="resolveUrl('/about/organisation')"
                 class="type-small text-[#79A38D] font-bold hover:text-gray-600 transition-colors"
               >
                 about us
               </a>,
               our
               <a
-                href="/about/people"
+                :href="resolveUrl('/about/people')"
                 class="type-small text-[#79A38D] font-bold hover:text-gray-600 transition-colors"
               >
                 people
               </a>
               and our
               <a
-                href="/about/documents-policies"
+                :href="resolveUrl('/about/documents-policies')"
                 class="type-small text-[#79A38D] font-bold hover:text-gray-600 transition-colors"
               >
                 policies and principles
@@ -167,7 +168,7 @@ footer {
           >
             <a
               v-if="navItem.link"
-              :href="navItem.link"
+              :href="resolveUrl(navItem.link)"
             >
               <h3 class="type-label-heading mb-1 text-[#393939]">
                 {{ navItem.text }}
@@ -188,7 +189,7 @@ footer {
               >
                 <li v-if="!item.children && item.link">
                   <a
-                    :href="item.link"
+                    :href="resolveUrl(item.link)"
                     class="type-body text-[#393939] text-muted-foreground hover:text-primary transition-colors pl-2"
                   >
                     {{ item.text }}
@@ -202,7 +203,7 @@ footer {
                   >
                     <a
                       v-if="!child?.bold"
-                      :href="child.link"
+                      :href="resolveUrl(child.link)"
                       class="type-body text-[#393939] text-muted-foreground hover:text-primary transition-colors pl-2"
                     >
                       {{ child.text }}
@@ -237,7 +238,7 @@ footer {
             </a>
 
             <a
-              href="/newsletter"
+              :href="resolveUrl('/newsletter')"
               class="type-body block mt-2 text-[#393939] text-muted-foreground hover:text-primary transition-colors"
             >
               View past newsletters
@@ -319,21 +320,21 @@ footer {
           </a> -->
 
           <a
-            href="/disclaimer"
+            :href="resolveUrl('/disclaimer')"
             class="type-small text-[#383938] hover:text-gray-600 transition-colors"
           >
             Disclaimer ➔
           </a>
 
           <a
-            href="/privacy"
+            :href="resolveUrl('/privacy')"
             class="type-small text-[#383938] hover:text-gray-600 transition-colors"
           >
             Privacy ➔
           </a>
 
           <a
-            href="/terms-conditions"
+            :href="resolveUrl('/terms-conditions')"
             class="type-small text-[#383938] hover:text-gray-600 transition-colors"
           >
             Terms of use ➔

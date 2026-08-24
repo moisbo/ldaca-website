@@ -2,6 +2,7 @@
 import { useData } from 'vitepress'
 import { ref, computed } from 'vue'
 import FeaturesBanner from './FeaturesBanner.vue'
+import { resolveUrl } from '../lib/url'
 
 const { theme } = useData()
 const buttonColors = theme.value.buttonColors || { bg: '#79A38D', text: '#ffffff' }
@@ -70,7 +71,7 @@ const thumbnailUrl = computed(() => {
 
   <section class="w-full" :style="{
     backgroundColor: headerBgColor,
-    backgroundImage: `url(${backgroundImage})`,
+    backgroundImage: `url(${resolveUrl(backgroundImage)})`,
     backgroundPosition: 'right center',
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'auto 100%'
@@ -82,7 +83,7 @@ const thumbnailUrl = computed(() => {
       <div class="flex-1 max-w-[calc(100%-600px)]">
         <h1 class="m-0 text-white">{{ tagline }}</h1>
         <div class="text-xl my-6 text-white/90 leading-relaxed" v-html="description"></div>
-        <a :href="buttonLink" target="_blank" rel="noopener noreferrer"
+        <a :href="resolveUrl(buttonLink)" target="_blank" rel="noopener noreferrer"
           :style="{ backgroundColor: buttonColors.bg, color: buttonColors.text }"
           class="inline-block px-6 py-4 rounded-lg font-semibold transition hover:opacity-90">
           {{ buttonText }}

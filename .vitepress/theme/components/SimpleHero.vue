@@ -2,6 +2,7 @@
 import { computed } from 'vue'
 import { useData } from 'vitepress'
 import Profile from './Profile.vue'
+import { resolveUrl } from '../lib/url'
 
 const { theme, frontmatter } = useData()
 const headerBgColor = theme.value.headerBgColor || '#383838'
@@ -70,7 +71,7 @@ const descriptionSegments = computed(() => {
   <section class="p-0">
     <!-- Full-width background -->
     <div class="relative w-full bg-cover bg-center bg-no-repeat min-h-[160px]"
-      :style="{ backgroundImage: `url(${backgroundImage})`, backgroundColor: headerBgColor }">
+      :style="{ backgroundImage: `url(${resolveUrl(backgroundImage)})`, backgroundColor: headerBgColor }">
       <!-- Content container -->
       <div class="max-w-[1184px] mx-auto py-8 px-4 sm:px-6 md:px-8 lg:px-2">
         <div class="w-full lg:max-w-[67%] relative z-10">

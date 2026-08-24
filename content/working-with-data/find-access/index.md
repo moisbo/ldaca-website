@@ -129,7 +129,7 @@ title: "Find & access"
   :items="[
       {
         title: 'Digital Preservation Masterclass PARADISEC',
-        image: '/working-with-data/find-access/DCC_Masterclass.png',
+        image: './DCC_Masterclass.png',
         link: 'https://www.youtube.com/watch?v=gRuwHx744KU',
         category: 'RECORDING'
       },

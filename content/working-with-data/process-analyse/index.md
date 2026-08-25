@@ -113,7 +113,7 @@ description="Being able to analyse large amounts of language data opens up vast 
       },
        {
         title: 'Vulgarity in English: Language, Creativity & Social Meaning',
-        image: '/images/ISLE.png,
+        image: '/images/ISLE.png',
         link: 'https://www.youtube.com/watch?v=l3K4v4LtDTQ',
         category: 'RECORDING'
       },

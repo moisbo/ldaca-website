@@ -33,7 +33,8 @@ description="Being able to analyse large amounts of language data opens up vast 
   :items="[
     {
       title: 'LDaCA Wordflow',
-      description: 'LDaCA Wordflow is a code-free text analytics tool that makes it easier for researchers to explore and analyse text without needing programming skills. Users can build flexible workflows by combining tools for frequency analysis, concordancing, trends, topic modelling and quotation analysis, with results from one tool feeding into the next.',
+      description: `LDaCA Wordflow is a code-free text analytics tool that makes it easier for researchers to explore and analyse text without needing programming skills. Users can build flexible workflows by combining tools for frequency analysis, concordancing, trends, topic modelling and quotation analysis, with results from one tool feeding into the next.
+      <br>LDaCA Wordflow was developed by the <a href='https://www.sydney.edu.au/research/facilities/sydney-informatics-hub.html' class='text-[#79A38D] hover:underline hover:decoration-dotted hover:decoration-2 hover:underline-offset-2 transition-colors font-bold'> Sydney Informatics Hub </a> and <a href='https://sydneycorpuslab.com/' class='text-[#79A38D] hover:underline hover:decoration-dotted hover:decoration-2 hover:underline-offset-2 transition-colors font-bold'>Sydney Corpus Lab</a>`,
       image: '/images/LDaCAWordflow.png',
       link: 'https://australian-text-analytics-platform.github.io/LDaCa_Text_Analytics_Tools/',
     },

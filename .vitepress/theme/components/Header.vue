@@ -23,20 +23,13 @@ const headerBgColor = theme.value.headerBgColor ?? 'transparent'
           </a>
         </div>
 
-        <!-- Right quick menu - Desktop (≥819.2px) -->
-        <div class="hidden lg:flex items-center gap-6 ml-auto pl-32">
-          <a :href="resolveUrl('/resources/posts/')"
-            class="text-base text-white hover:text-[#79A38D] hover:font-bold transition-colors">Blog</a>
-          <a :href="resolveUrl('/newsletter')"
-            class="text-base text-white hover:text-[#79A38D] hover:font-bold transition-colors">Newsletter</a>
-          <VPNavBarSearch />
-        </div>
-
-        <!-- Right quick menu - Tablet (768-1023px) -->
-        <div class="hidden md:flex lg:hidden flex-col items-end ml-auto pl-24 gap-2">
+        <!-- Right quick menu - Tablet (614.4px-1023px) -->
+        <div class="hidden md:flex lg:flex xl:hidden flex-col items-end ml-auto pl-24 gap-2">
 
           <!-- Search bar -->
-          <VPNavBarSearch />
+          <div class="md:hidden">
+            <VPNavBarSearch />
+          </div>
 
           <!-- Links below search -->
           <div class="flex gap-3">
@@ -44,6 +37,15 @@ const headerBgColor = theme.value.headerBgColor ?? 'transparent'
             <a :href="resolveUrl('/newsletter')" class="text-s text-white hover:text-[#79A38D] transition-colors">Newsletter</a>
           </div>
 
+        </div>
+
+        <!-- Right quick menu - Desktop (≥1024px) -->
+        <div class="hidden xl:flex items-center gap-6 ml-auto pl-32">
+          <a :href="resolveUrl('/resources/posts/')"
+            class="text-base text-white hover:text-[#79A38D] hover:font-bold transition-colors">Blog</a>
+          <a :href="resolveUrl('/newsletter')"
+            class="text-base text-white hover:text-[#79A38D] hover:font-bold transition-colors">Newsletter</a>
+          <VPNavBarSearch />
         </div>
       </div>
     </div>

@@ -113,7 +113,7 @@ const thumbnailUrl = computed(() => {
     <!-- MOBILE / TABLET -->
     <div class="xl:hidden max-w-[1184px] mx-auto py-12 px-4 sm:px-6 md:px-8 lg:px-2 space-y-8">
       <div v-for="(item, index) in [{ tagline, description, videoUrl }]" :key="index"
-        class="bg-gray-800 rounded-lg p-6 shadow-sm">
+        class="bg-[#393939] rounded-lg p-6 shadow-sm">
         <h1 class="text-2xl font-bold text-white mb-4">{{ item.tagline }}</h1>
         <div class="text-white/90 leading-relaxed mb-4" v-html="item.description"></div>
         <iframe :src="item.videoUrl" title="Hero Video" frameborder="0" allowfullscreen

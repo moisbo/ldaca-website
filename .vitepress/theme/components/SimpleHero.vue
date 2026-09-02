@@ -76,10 +76,10 @@ const descriptionSegments = computed(() => {
       <div class="max-w-[1184px] mx-auto py-8 px-4 sm:px-6 md:px-8 lg:px-2">
         <div class="w-full lg:max-w-[67%] relative z-10">
           <p v-if="breadcrumb" class="type-meta m-0 text-white">{{ breadcrumb }}</p>
-          <h1 class="type-display m-0 pt-8 pb-4 text-white">{{ title }}</h1>
+          <h1 class="type-display m-0 pt-2 pb-1 md:pt-8 md:pb-4 text-white">{{ title }}</h1>
           <!-- Only show description if the page frontmatter has "layout: home" or "layout: event" -->
           <p v-if="frontmatter.layout === 'home' || frontmatter.layout === 'event' || frontmatter.layout === 'post' || frontmatter.layout === 'doc' || frontmatter.layout === 'root_list' || frontmatter.layout === 'project'"
-            class="type-lead my-4 mb-8 text-white/90 text-xl">
+            class="type-lead my-2 md:my-4 md:mb-8 text-white/90 text-xl">
             <template v-for="(segment, index) in descriptionSegments" :key="index">
               <span v-if="segment.type === 'html'" v-html="segment.html"></span>
               <Profile v-else :id="segment.id" />

@@ -23,7 +23,7 @@ const getImage = (post) =>
 
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
 
-      <article v-for="post in latestPosts" :key="post.url" class="relative overflow-hidden shadow-xl h-[480px]">
+      <article v-for="post in latestPosts" :key="post.url" class="relative overflow-hidden shadow-xl h-[460px] md:h-[480px]">
 
         <!-- background image link -->
         <a :href="resolveUrl(post.url)" class="absolute inset-0 block" :aria-label="post.frontmatter.title">

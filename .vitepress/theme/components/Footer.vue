@@ -311,7 +311,7 @@ footer {
 
       <!-- Bottom Links -->
       <div class="mt-8 pt-6 pb-6 border-t footer-divider">
-        <nav class="flex items-center justify-center gap-32 flex-wrap">
+        <nav class="flex items-center justify-center gap-8 md:gap-32 lg:gap-32 flex-wrap">
           <!-- <a
             href="/sitemap.xml"
             class="type-small text-[#383938] hover:text-gray-600 transition-colors"

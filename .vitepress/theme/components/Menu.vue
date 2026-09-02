@@ -67,12 +67,12 @@ const getGridClass = (items) => {
           <li v-for="item in nav" :key="item.text" class="list-none relative">
             <!-- If item has a link and no sub-items, render as link -->
             <a v-if="item.link && !item.items" :href="resolveUrl(item.link) || '#'"
-              class="flex items-center gap-1.5 text-xl font-medium text-white hover:text-[#79A38D] hover:font-bold hover:underline hover:decoration-dotted hover:decoration-2 hover:underline-offset-8 transition-colors">
+              class="flex items-center gap-1.5 text-lg xl:text-xl font-medium text-white hover:text-[#79A38D] hover:font-bold hover:underline hover:decoration-dotted hover:decoration-2 hover:underline-offset-8 transition-colors">
               {{ item.text }}
             </a>
             <!-- Otherwise, render as dropdown button -->
             <button v-else @click="toggleMenu(item.text)"
-              class="flex items-center gap-1.5 text-xl font-medium text-white hover:text-[#79A38D] hover:font-bold hover:underline hover:decoration-dotted hover:decoration-2 hover:underline-offset-8 transition-colors">
+              class="flex items-center gap-1.5 text-lg xl:text-xl font-medium text-white hover:text-[#79A38D] hover:font-bold hover:underline hover:decoration-dotted hover:decoration-2 hover:underline-offset-8 transition-colors">
               {{ item.text }}
               <svg v-if="item.items" class="h-4 w-4 transition-transform"
                 :class="{ 'rotate-180': activeMenu === item.text }" viewBox="0 0 24 24" fill="none"
@@ -90,12 +90,12 @@ const getGridClass = (items) => {
           <li v-for="item in nav" :key="item.text" class="list-none">
             <!-- If item has a link and no sub-items, render as link -->
             <a v-if="item.link && !item.items" :href="resolveUrl(item.link) || '#'"
-              class="flex items-center gap-1 text-s font-medium text-white hover:text-gray-300 transition-colors px-2 py-1">
+              class="flex items-center gap-1 text-lg font-medium text-white hover:text-gray-300 transition-colors px-2 py-1">
               {{ item.text }}
             </a>
             <!-- Otherwise, render as dropdown button -->
             <button v-else @click="toggleMenu(item.text)"
-              class="flex items-center gap-1 text-s font-medium text-white hover:text-gray-300 transition-colors px-2 py-1">
+              class="flex items-center gap-1 text-lg font-medium text-white hover:text-gray-300 transition-colors px-2 py-1">
               {{ item.text }}
               <svg v-if="item.items" class="h-3 w-3 transition-transform"
                 :class="{ 'rotate-180': activeMenu === item.text }" viewBox="0 0 24 24" fill="none"
@@ -202,7 +202,7 @@ const getGridClass = (items) => {
       enter-to-class="translate-x-0" leave-active-class="transition ease-in duration-200"
       leave-from-class="translate-x-0" leave-to-class="translate-x-full">
       <div v-if="mobileMenuOpen"
-        class="md:hidden fixed top-0 right-0 bottom-0 w-80 max-w-[85vw] bg-gray-900 shadow-2xl z-50 overflow-y-auto">
+        class="md:hidden fixed top-0 right-0 bottom-0 w-80 max-w-[85vw] bg-[#393939] shadow-2xl z-50 overflow-y-auto">
         <div class="p-6">
           <!-- Close button -->
           <div class="flex justify-end mb-6">
@@ -220,14 +220,14 @@ const getGridClass = (items) => {
               <li v-for="item in nav" :key="item.text" class="list-none">
                 <!-- Simple link items -->
                 <a v-if="item.link && !item.items" :href="resolveUrl(item.link) || '#'" @click="closeMobileMenu"
-                  class="block px-4 py-3 text-white hover:bg-gray-800 rounded-lg transition-colors font-medium">
+                  class="block px-4 py-3 text-white hover:bg-[#79A38D] rounded-lg transition-colors font-medium">
                   {{ item.text }}
                 </a>
 
                 <!-- Expandable menu items -->
                 <div v-else>
                   <button @click="toggleMobileSubmenu(item.text)"
-                    class="w-full flex items-center justify-between px-4 py-3 text-white hover:bg-gray-800 rounded-lg transition-colors font-medium">
+                    class="w-full flex items-center justify-between px-4 py-3 text-white hover:bg-[#79A38D] rounded-lg transition-colors font-medium">
                     <span>{{ item.text }}</span>
                     <svg class="h-5 w-5 transition-transform"
                       :class="{ 'rotate-180': mobileActiveSubmenu === item.text }" viewBox="0 0 24 24" fill="none"
@@ -245,7 +245,7 @@ const getGridClass = (items) => {
                       <template v-for="subItem in item.items" :key="subItem.text + (subItem.link || '')">
                         <!-- Regular submenu items -->
                         <a v-if="!subItem.children && subItem.link" :href="resolveUrl(subItem.link)" @click="closeMobileMenu"
-                          class="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-gray-800 rounded-lg transition-colors"
+                          class="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-[#79A38D] rounded-lg transition-colors"
                           :class="{ 'font-bold': subItem.bold }">
                           {{ subItem.text }}
                         </a>
@@ -257,7 +257,7 @@ const getGridClass = (items) => {
                           </div>
                           <div class="space-y-1" v-for="child in subItem.children" :key="child?.link || child?.text"><a
                               :href="resolveUrl(child.link)"
-                              class="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-gray-800 rounded-lg transition-colors"
+                              class="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-[#79A38D] rounded-lg transition-colors"
                               :class="{ 'font-bold': child.bold }" @click="closeMobileMenu">{{ child.text }}</a></div>
                         </div>
                       </template>

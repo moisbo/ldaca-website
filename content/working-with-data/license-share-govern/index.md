@@ -139,7 +139,7 @@ title: "License, share & govern"
         title: 'CARE Principles',
         description: 'The CARE Principles are a set of guidelines for respecting and protecting Indigenous Peoples\' rights and interests in data and knowledge. They complement the FAIR principles of open data and science, and aim to advance Indigenous innovation and self-determination.',
         image: 'https://images.squarespace-cdn.com/content/v1/5d3799de845604000199cd24/1567592828276-IZWQDX1H6DRCD85GRSWJ/CARE+Principles.png?format=2500w',
-        link: 'https://www.gida-global.org/care'
+        link: 'https://www.gida-global.org/careprinciples'
       },
       {
         title: 'FAIR Principles',

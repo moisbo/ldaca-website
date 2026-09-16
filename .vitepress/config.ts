@@ -493,12 +493,13 @@ export default defineConfig({
       }
     }
 
-    // Walk content subdirectories where images are commonly used and copy any found images to the dist folder, ensuring they can be accessed with absolute paths in the built site.
+    // Walk content subdirectories where images and files are commonly used and copy any found images to the dist folder, ensuring they can be accessed with absolute paths in the built site.
     const imageRoots = [
       'training-events/events',
       'resources/guides',
       'resources/posts',
       'resources/publications',
+      'resources/licenses',
       'projects-case-studies',
       'about',
       'about/steering-committee',

@@ -472,9 +472,9 @@ export default defineConfig({
       }
     }
 
-    // Also copy local content images so absolute /resources/... paths used in Vue props resolve in dist.
-    const IMAGE_EXT = /\.(png|jpe?g|gif|webp|svg|avif)$/i
-    const walkAndCopyImages = (dir: string, relBase = '') => {
+    // Copy local media and downloadable files so relative links resolve in dist.
+    const ASSET_EXT = /\.(png|jpe?g|gif|webp|svg|avif|pdf|xlsx?|pptx?|docx?|zip)$/i
+    const walkAndCopyAssets = (dir: string, relBase = '') => {
       if (!fs.existsSync(dir)) return
       const entries = fs.readdirSync(dir, { withFileTypes: true })
 
@@ -483,18 +483,18 @@ export default defineConfig({
         const rel = path.join(relBase, entry.name)
 
         if (entry.isDirectory()) {
-          walkAndCopyImages(full, rel)
+          walkAndCopyAssets(full, rel)
           continue
         }
 
-        if (!IMAGE_EXT.test(entry.name)) continue
+        if (!ASSET_EXT.test(entry.name)) continue
         const dst = path.join(outDir, rel)
         copyIfExists(full, dst)
       }
     }
 
-    // Walk content subdirectories where images and files are commonly used and copy any found images to the dist folder, ensuring they can be accessed with absolute paths in the built site.
-    const imageRoots = [
+    // Walk content subdirectories where local media and downloadable files are used.
+    const assetRoots = [
       'training-events/events',
       'resources/guides',
       'resources/posts',
@@ -506,8 +506,8 @@ export default defineConfig({
       'contact',
     ]
 
-    for (const relRoot of imageRoots) {
-      walkAndCopyImages(path.join(srcDir, relRoot), relRoot)
+    for (const relRoot of assetRoots) {
+      walkAndCopyAssets(path.join(srcDir, relRoot), relRoot)
     }
   }
 })
